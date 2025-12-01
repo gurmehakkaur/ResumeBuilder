@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - gurmehak/develop
+  pull_request:
+    branches:
+      - gurmehak/develop
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+          cache-dependency-path: web-app/package-lock.json
+
+      - name: Install node dependencies
+        run: npm ci
+        working-directory: web-app
+
+      - name: Run ESLint
+        run: npm run lint
+        working-directory: web-app
