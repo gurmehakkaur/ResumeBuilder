@@ -2,6 +2,8 @@
 
 This is the public version of LazyMe web application developed for project Management and Implementation course. 
 
+Live at: https://lazy-me-five.vercel.app/
+
 ## About the application:
 The modern job application process demands tailored resumes for each posting to pass automated Applicant Tracking Systems (ATS). However, customizing resumes manually is time-consuming, inefficient, and stressful—especially for students and job seekers applying to multiple roles per week.
 LazyMe is a browser extension and web platform that enables one-click resume customization directly from job listing pages. Users upload a master resume once, and LazyMe intelligently tailors and formats new resumes for each job, ensuring accuracy and ATS compliance without repeated manual edits.
